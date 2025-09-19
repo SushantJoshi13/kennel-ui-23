@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap");
+
+body {
+  margin: 0;
+
+  font-family: "Fraunces", serif !important;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas {
+  background:
+    linear-gradient(90deg, #161122 21px, transparent 1%) center,
+    linear-gradient(#161122 21px, transparent 1%) center,
+    #a799cc;
+  background-size: 22px 22px;
+}
+
+.certificate_map {
+  background: url(../src/assets/Images/Certificate_map_svg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #f79327;
+}
+.disable_root {
+  .d3-tree-node:nth-of-type(1) {
+    display: none;
+  }
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.layoutflow {
+  position: relative;
+}
+
+.layoutflow .controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  font-size: 12px;
+}
+
+.layoutflow .controls button:first-child {
+  margin-right: 10px;
+}
+
+@layer components {
+  .btn-gradient {
+    @apply bg-gradient-to-r from-[#FFCF67] to-[#D3321D];
+  }
+  .btn-primary {
+    @apply flex h-10 items-center justify-center rounded-md bg-gradient-to-r from-[#FFCF67] to-[#D3321D] p-3 font-semibold text-secondary;
+  }
+  .btn-disabled {
+    @apply flex h-10 cursor-not-allowed items-center justify-center rounded-md bg-slate-300 p-3 font-semibold text-secondary;
+  }
+  .btn-secondary {
+    @apply flex h-14 items-center justify-center rounded-md bg-primary p-3 font-semibold text-secondary;
+  }
+  .cards-primary {
+    @apply flex h-14 items-center justify-center rounded-md bg-tertiary p-3 font-semibold text-secondary;
+  }
+  .btn-white {
+    @apply flex h-14 items-center justify-center rounded-md bg-white p-3 font-semibold text-primary;
+  }
+  .custom-form-input {
+    @apply w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow;
+  }
+  .header-style {
+    @apply flex  h-10 w-screen justify-center bg-primary p-2 font-bold text-white;
+  }
+  .Add-pet-btn {
+    @apply flex h-14 items-center justify-center rounded-md bg-primary p-3 font-semibold text-secondary;
+  }
+
+  .header-buttons {
+    @apply flex h-12 transform items-center justify-end rounded-lg px-4 text-center text-sm font-medium text-black duration-300 hover:shadow-xl sm:h-10;
+  }
+
+  .header-login-register {
+    @apply flex h-12 transform items-center justify-center rounded-lg bg-transparent px-5 text-center text-sm font-medium text-white transition-colors duration-300 hover:border-white hover:shadow-xl sm:h-10;
+  }
+  .h1-title {
+    @apply text-[40px] font-semibold;
+  }
+}
+
+.grid-4 {
+  @apply grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4;
+}
+.grid-3 {
+  @apply grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3;
+}
+
+.grid-2 {
+  @apply grid grid-cols-1 gap-5 md:grid-cols-2;
+}
+.custom-wrapper {
+  width: 100% !important;
+  display: block !important;
+  margin-bottom: 25px !important;
+  height: 220px !important;
+}
+
+.custom-editor {
+  height: 200px !important;
+  border: 1px solid #f1f1f1 !important;
+  padding: 5px !important;
+  border-radius: 2px !important;
+}
